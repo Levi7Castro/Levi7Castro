@@ -1,11 +1,9 @@
 # Levi de Castrp · Data Engineer & BI Analyst
-
 > Transformando dados brutos em decisões — pipelines em produção, dashboards estratégicos e automação com IA.
 
 ---
 
 ## 🛠 Stack
-
 **Data Engineering**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Apache Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat&logo=apacheairflow&logoColor=white)
@@ -27,9 +25,9 @@
 ---
 
 ## 🚀 Projetos em destaque
-
 | Projeto | Descrição | Stack |
 |--------|-----------|-------|
+| [🏗️ Pipeline AdventureWorks](https://github.com/Levi7Castro/pipeline_adventure_work) | Pipeline ELT completo com Arquitetura Medallion (Bronze → Silver → Gold): ingestão incremental de 6 tabelas via watermark, transformações e testes automatizados com dbt (dedup, tipagem, integridade referencial), modelagem dimensional (fato + 4 dimensões) | Python · SQLAlchemy · dbt · PostgreSQL · SQL Server · Airflow |
 | [🌦 Weather ETL Pipeline](https://github.com/Levi7Castro/weather-data-etl-pipeline) | Pipeline orquestrado com Airflow que extrai dados climáticos via API, transforma com Pandas e carrega no PostgreSQL em container Docker | Python · Airflow · PostgreSQL · Docker |
 | [💰 Financial Data Engineering Flow](https://github.com/Levi7Castro/Financial-Data-Engineering-Flow) | Pipeline de engenharia de dados aplicado ao domínio financeiro | Python · Pandas |
 | [🔄 ETL Mongo → PostgreSQL](https://github.com/Levi7Castro/ETL-Mongo-PostgreSQL) | Pipeline de migração e integração entre banco NoSQL (MongoDB) e relacional (PostgreSQL) | Python · MongoDB · PostgreSQL |
@@ -37,7 +35,6 @@
 ---
 
 ## 📊 Em produção (experiência profissional)
-
 - **+10 DAGs** orquestradas com Apache Airflow e SSIS em ambiente corporativo
 - **Data Warehouse** em SQL Server e PostgreSQL integrando ERPs Protheus, RM e Winthor
 - **+100 usuários** atendidos via dashboards Power BI em 9 empresas de um CSC
@@ -46,7 +43,6 @@
 ---
 
 ## 📈 GitHub Stats
-
 <p align="left">
   <img height="150" src="https://github-readme-stats.vercel.app/api?username=Levi7Castro&show_icons=true&theme=default&hide_border=true&count_private=true" />
   <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Levi7Castro&layout=compact&theme=default&hide_border=true" />
@@ -55,7 +51,6 @@
 ---
 
 ## 🎓 Formação & Certificações
-
 - 🎓 **Business Intelligence** — UNIFOR (conclusão 2026)
 - 📜 Engenharia de Dados — Data Science Academy · Ada Tech · Udemy
 - 📜 AWS Cloud — Hashtag Treinamento *(em certificação)*
@@ -64,7 +59,6 @@
 ---
 
 ## 📬 Contato
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/levi-castro-b231652b7)
 [![Portfolio](https://img.shields.io/badge/Portfólio-000000?style=flat&logo=netlify&logoColor=white)](https://levicastro-data.netlify.app)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:marcoslevi2024.mll@gmail.com)
