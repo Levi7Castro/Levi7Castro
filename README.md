@@ -1,4 +1,4 @@
-# Levi de Castrp · Data Engineer & BI Analyst
+# Levi de Castro · Data Engineer & BI Analyst
 > Transformando dados brutos em decisões — pipelines em produção, dashboards estratégicos e automação com IA.
 
 ---
