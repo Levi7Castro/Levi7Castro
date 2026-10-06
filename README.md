@@ -1,5 +1,5 @@
 # Levi de Castro · Data Engineer & BI Analyst
-> Construo pipelines de dados de ponta a ponta — da ingestão à camada analítica — com foco em confiabilidade, testes automatizados e decisões orientadas a dados.
+> Construo pipelines de dados de ponta a ponta — da ingestão à camada analítica — com foco em ELT, confiabilidade, testes automatizados e decisões orientadas a dados.
 
 📍 Fortaleza, CE · Aberto a oportunidades remotas
 
@@ -15,6 +15,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
+![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat&logo=uv&logoColor=white)
 
 **Analytics & BI**
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
@@ -25,10 +26,21 @@
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![WSL](https://img.shields.io/badge/WSL-4D4D4D?style=flat&logo=linux&logoColor=white)
 
 ---
 
 ## 🚀 Projetos em destaque
+
+### 🛒 [E-commerce Data Pipeline](https://github.com/Levi7Castro/ecommerce-dbt-airflow)
+Pipeline **ELT** com Arquitetura Medallion (Bronze → Silver → Gold), usando **PostgreSQL como DW analítico** e orquestração diária no **Airflow 3**.
+- Transformações versionadas com **dbt**, em camadas com dependências explícitas
+- Fato de itens vendidos com **grão definido** (pedido + produto) e regra de venda documentada, evitando receita inflada
+- **Testes de qualidade**: `not_null`, `unique`, `relationships`, `accepted_values` e teste genérico próprio de validação de e-mail via regex
+- DAG `dbt debug → dbt build` com retentativas, rodando em **Docker Compose** com o dbt em ambiente Python isolado
+- Ambiente reproduzível com **uv**, documentação e lineage gerados pelo `dbt docs`
+
+`Python` · `dbt` · `PostgreSQL` · `Airflow` · `Docker` · `uv` · `WSL`
 
 ### 🏗️ [Pipeline AdventureWorks](https://github.com/Levi7Castro/pipeline_adventure_work)
 Pipeline **ELT completo** com Arquitetura Medallion (Bronze → Silver → Gold).
