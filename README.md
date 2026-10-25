@@ -24,6 +24,7 @@
 
 **DevOps & Cloud**
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![WSL](https://img.shields.io/badge/WSL-4D4D4D?style=flat&logo=linux&logoColor=white)
@@ -31,6 +32,17 @@
 ---
 
 ## 🚀 Projetos em destaque
+
+### 🏦 [BCB Data Platform](https://github.com/Levi7Castro/bcb-data-platform)
+Plataforma de dados **ELT completa** com Arquitetura Medallion (Bronze → Silver → Gold), construída sobre a API do Banco Central do Brasil — do zero ao deploy automatizado.
+- Extração via **Airbyte** (conector declarativo customizado) para a camada bronze em **PostgreSQL**
+- Transformações **dbt** em camadas (silver tipada/testada, gold com modelos de negócio), documentação e lineage gerados via `dbt docs`
+- Orquestração completa com **Airflow (Astro)**, Dockerizado, com ambientes Python isolados por componente via **uv**
+- **CI** no GitHub Actions: cada PR roda o pipeline completo (carga + dbt build) num Postgres efêmero antes do merge
+- **CD** com runner self-hosted: push na `main` atualiza o código e reinicia o ambiente Airflow automaticamente
+- Dashboard de consumo em **Streamlit**, lendo direto da camada gold
+
+`Python` · `Airbyte` · `dbt` · `PostgreSQL` · `Airflow` · `Docker` · `GitHub Actions` · `Streamlit` · `uv`
 
 ### 🛒 [E-commerce Data Pipeline](https://github.com/Levi7Castro/ecommerce-dbt-airflow)
 Pipeline **ELT** com Arquitetura Medallion (Bronze → Silver → Gold), usando **PostgreSQL como DW analítico** e orquestração diária no **Airflow 3**.
@@ -51,18 +63,6 @@ Pipeline **ELT completo** com Arquitetura Medallion (Bronze → Silver → Gold)
 - Limitações técnicas documentadas de forma transparente
 
 `Python` · `SQLAlchemy` · `dbt` · `PostgreSQL` · `SQL Server` · `Airflow`
-
-### 🌦 [Weather ETL Pipeline](https://github.com/Levi7Castro/weather-data-etl-pipeline)
-Pipeline orquestrado com Airflow que extrai dados climáticos via API, transforma com Pandas e carrega no PostgreSQL em container Docker.
-`Python` · `Airflow` · `PostgreSQL` · `Docker`
-
-### 💰 [Financial Data Engineering Flow](https://github.com/Levi7Castro/Financial-Data-Engineering-Flow)
-Pipeline de engenharia de dados aplicado ao domínio financeiro.
-`Python` · `Pandas`
-
-### 🔄 [ETL Mongo → PostgreSQL](https://github.com/Levi7Castro/ETL-Mongo-PostgreSQL)
-Pipeline de migração e integração entre banco NoSQL (MongoDB) e relacional (PostgreSQL).
-`Python` · `MongoDB` · `PostgreSQL`
 
 ---
 
