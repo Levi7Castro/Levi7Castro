@@ -11,6 +11,8 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Apache Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat&logo=apacheairflow&logoColor=white)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black)
+![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat&logo=minio&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
@@ -43,6 +45,16 @@ Plataforma de dados **ELT completa** com Arquitetura Medallion (Bronze → Silve
 - Dashboard de consumo em **Streamlit**, lendo direto da camada gold
 
 `Python` · `Airbyte` · `dbt` · `PostgreSQL` · `Airflow` · `Docker` · `GitHub Actions` · `Streamlit` · `uv`
+
+### 🛢️ [Data Lake ANP](https://github.com/Levi7Castro/datalake-anp)
+Data lake local com **Arquitetura Medallion** sobre dados abertos de preços de combustíveis da ANP, usando **MinIO** (API S3) como armazenamento e **DuckDB** para processamento.
+- Ingestão dos arquivos semestrais da ANP (ZIP/CSV) na camada **bronze**, preservando o dado cru
+- Silver em **Parquet** particionado por ano/UF, com detecção de codificação (UTF-8/Latin-1), tipagem de datas e preços e remoção de linhas vazias
+- Gold com preço semanal por UF/produto e ranking da semana mais recente, com filtros de qualidade (data e faixa de preço)
+- Orquestração com **Airflow** (DAG bronze → silver → gold), tudo em **Docker Compose**
+- Sem credenciais no código: variáveis de ambiente e `.env` fora do Git
+
+`Python` · `MinIO` · `DuckDB` · `Parquet` · `Airflow` · `Docker` · `uv`
 
 ### 🛒 [E-commerce Data Pipeline](https://github.com/Levi7Castro/ecommerce-dbt-airflow)
 Pipeline **ELT** com Arquitetura Medallion (Bronze → Silver → Gold), usando **PostgreSQL como DW analítico** e orquestração diária no **Airflow 3**.
