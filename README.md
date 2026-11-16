@@ -76,6 +76,17 @@ Pipeline **ELT completo** com Arquitetura Medallion (Bronze → Silver → Gold)
 
 `Python` · `SQLAlchemy` · `dbt` · `PostgreSQL` · `SQL Server` · `Airflow`
 
+### 🕷️ [Books Scraper → MongoDB](https://github.com/Levi7Castro/books_scraper_mongo)
+Pipeline de dados de ponta a ponta: **web scraping** de um catálogo online, camada raw em JSON e carga em banco **NoSQL (MongoDB)**, orquestrado diariamente pelo **Airflow**.
+- Coleta com **requests + BeautifulSoup**, com paginação e pausa entre requisições (requests no lugar de Selenium, por ser HTML estático)
+- Carga **idempotente** no MongoDB: upsert por URL com índice único, sem duplicar registros a cada execução
+- DAG `extract → load` agendada às 06:00, com retentativas e parâmetro `max_pages` para testes rápidos
+- Lógica do pipeline separada do Airflow, facilitando testes e reuso
+- Ambiente completo em **Docker Compose** (MongoDB + Postgres + Airflow) e **testes automatizados** com pytest
+- Consultas analíticas com **aggregation pipeline** do MongoDB
+
+`Python` · `BeautifulSoup` · `MongoDB` · `Airflow` · `Docker` · `pytest`
+
 ---
 
 ## 📊 Em produção (experiência profissional)
